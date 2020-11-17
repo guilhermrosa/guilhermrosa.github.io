@@ -1,1 +1,0 @@
-# guilhermrosa.github.io
