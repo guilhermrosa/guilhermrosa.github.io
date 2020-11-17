@@ -1,0 +1,28 @@
+!DOCTYPE html>
+<html lang="pt">
+<head>
+    <script>
+        function car() 
+		{
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+			var n3 = document.getElementById("n3").value;
+			var n4 = document.getElementById("n4").value;
+			var a= parseFloat(n1);
+			var b= parseFloat(n2);
+			var c= parseFloat(n3);
+			var d= parseFloat(n4);
+			var sf = c + (d*a) + (5 * b / 100);
+			document.getElementById("texto").innerHTML = sf;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="n1" placeholder="Qntd carros vendidos">
+    <input type="number" id="n2" placeholder="Vlr total vendas">
+	<input type="number" id="n3" placeholder="Salário fixo">
+	<input type="number" id="n4" placeholder="Vlr/carro">
+    <button onclick="javascript:car()"> Calcular salário final </button>
+	<h3 id="texto"></h3>
+</body>
+</html>

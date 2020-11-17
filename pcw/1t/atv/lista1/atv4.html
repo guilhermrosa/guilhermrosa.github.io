@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <script>
+        function pitagoras() 
+		{
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+           var r= parseFloat(n1);
+		   var f= parseFloat(n2);
+		   
+		   var a = Math.pow(r,2)+Math.pow(f,2);
+		   var res = Math.sqrt(a);
+		   alert(res);
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="n1">
+	+
+    <input type="number" id="n2" />
+    <button onclick="javascript:pitagoras()"> resultado </button>
+</body>
+</html>

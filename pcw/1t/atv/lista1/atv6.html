@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <script>
+        function carro() 
+		{
+            var N1 = document.getElementById("n1").value;
+            
+            var n1= parseInt (N1);
+			var cf= n1+((28/100)*n1)+((45/100)*n1);
+			document.getElementById("texto").innerHTML = cf;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="n1" placeholder="custo de fabrica">
+    
+	
+    <button onclick="javascript:carro()"> Calcular custo total</button>
+	<h3 id="texto"></h3>
+</body>
+</html>

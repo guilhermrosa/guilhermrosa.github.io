@@ -1,0 +1,23 @@
+<html lang="pt">
+<head>
+    <script>
+        function apple() 
+		{
+            var n1 = document.getElementById("n1").value;
+			var res;
+			if(n1<12)
+			{res = n1 * 1.30;}
+			else
+			{res = n1;}
+			
+			
+			document.getElementById("texto").innerHTML = res;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="n1" placeholder="Escreva a quantidade de maçãs">
+    <button onclick="javascript:apple()"> Custo total </button>
+	<h3 id="texto"></h3>
+</body>
+</html>

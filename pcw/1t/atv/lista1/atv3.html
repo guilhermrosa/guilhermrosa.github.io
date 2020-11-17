@@ -1,0 +1,33 @@
+<!DOCTYPEhtml>
+<html> 
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+	function primo(){
+		var vd = document.getElementById("teste").value;
+        var p = 0;
+        var i;
+        i=2;
+        while(i <= Math.sqrt(vd))
+        {
+            if(vd%i==0)
+            { p=p+1;}
+            i=i+1;
+        }
+		if(p>0)
+		{p="não primo";}
+		else{p="primo";}
+		alert("Bah! É "+p);
+	}
+</script>
+</head>
+<body>
+	<form  name="meuForm">
+
+		<input id="teste" onblur="javascript:primo();"/> 
+
+		<button onclick="javascript:primo();">Executar</button>
+	</form>
+
+</body>
+</html>

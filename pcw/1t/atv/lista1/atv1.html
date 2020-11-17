@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <script>
+        function soma() 
+		{
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+           var r= parseFloat(n1)+parseFloat(n2);
+		   document.getElementById("r").innerHTML = r;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="n1">
+	+
+    <input type="number" id="n2" />
+    <button onclick="javascript:soma()"> Somar </button>
+	<h3 id="r"></h3>
+</body>
+</html>
