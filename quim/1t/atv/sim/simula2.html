@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+
+<script type="text/javascript">
+
+function estequio()
+{
+	var vol = 22.4; 
+	vol =  parseFloat(vol);
+	var molP =1;
+	molP = parseFloat(molP);
+	var qnt = document.getElementById("valor").value;
+	qnt =  parseFloat(qnt);
+	var reac = document.getElementById("reac").value;
+	var resultado = "";
+	if(reac == "1")
+	{
+		var resu=  qnt / vol; 
+		
+		resultado = "22,4 L ---> 1 mol <br>" + qnt + "L ---> X mol <br>" + qnt + "*1 =" + qnt + "<br> 22,4*X = 22,4X <br> X = " + 
+		qnt + "/22,4 <br> X = " + resu + "mol <br> " + qnt + " litros de O = "+ resu + " mol de O <br>"+ "0,5 O2 = 1 O <br> "+
+		"1 mol de O ---> 1 mol de H2O <br> <b> Então </b> <br><b>" + resu + " mol de O ---> " + resu + " mol de H2O</b>";
+		document.getElementById("conta").innerHTML = resultado;
+	}
+
+	if(reac == "2")
+	{
+		var resu=  qnt / vol; 
+		
+		resultado = "22,4 L ---> 1 mol <br>" + qnt + "L ---> X mol <br>" + qnt + "*1 =" + qnt + "<br> 22,4*X = 22,4X <br> X = " + 
+		qnt + "/22,4 <br> X = " + resu + "mol <br> " + qnt + " litros de O = "+ resu + " mol de O <br>"+ "0,5 O2 = 1 O <br><b> 1 H2 = 2 H </b><br> "+
+		"1 mol de O ---> 1 mol de H2 <br> <b> Então </b> <br><b>" + resu + " mol de O ---> " + resu * 2+ " mol de H</b>";
+		document.getElementById("conta").innerHTML = resultado;
+	}
+
+	if(reac == "3")
+	{
+		var resu=  qnt * molP; 
+		
+		resultado = "<b> 0,5 O2 = 1 O </b> <br> 22,4 L ---> 1 mol <br>"  + "22,4 litros de O = 1 mol de O <br>"+
+		"1 mol de H2O ---> 1 mol de O <br>"+ resu +" mol de H2O ---> "+resu*vol+" litros de O <br> <b> Então  <br>" +
+		 resu + " mol de H2O ---> " + resu + " mol de O</b>";
+		document.getElementById("conta").innerHTML = resultado;
+	}
+
+	if(reac == "4")
+	{
+		var resu=  qnt * molP; 
+		
+		resultado = "<b> 0,5 O2 = 1 O </b> <br> 22,4 L ---> 1 mol <br>"  + "22,4 litros de O = 1 mol de O <br>"+
+		"1 mol de H2 ---> 1 mol de O <br>"+ resu +" mol de H2 ---> "+resu*vol+" litros de O ---> "+resu+" mol de O<br><b> 1 H2 = 2 H </b><br><b> Então  <br>" +
+		 resu*2 + " mol de H ---> " + resu + " mol de O</b>";
+		document.getElementById("conta").innerHTML = resultado;
+	}
+}
+
+	</script>
+
+<h1><b> Simulação 02 </b></h1>
+<br>
+<h3>Reação de formação da água:<b> 0,5 O2 + H2 ---> H2O </b></h3>
+<br>
+<h3> Selecione abaixo a correlação direta de sua escolha e digite a quantidade de mols ou volume do primeiro componente.</h3>
+
+<br>
+<div class="margem"> 
+	
+		<select name = "reac" id='reac' >
+			<option value="1">  O(v) - 1 H2O(mol)</option>
+			<option value="2">  O(v) - 1 H2(mol) </option>
+			<option value="3"> H2O(mol) - 22,4L O(v) </option>
+			<option value="4"> H2(mol) -  22,4L O(v) </option>
+		</select>
+		
+		<input id = "valor" 
+		type="number" 
+		id="valor"
+		placeholder="Insira aqui a quantidade."	>
+		
+		<button onclick="estequio();">Executar</button>
+		<p id="conta"></p>
+
+
+	
+	<p> Guilherme Rosa e Luíza Rotina</p>
+</div>
+</body>
+</html>
