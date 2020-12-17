@@ -2,10 +2,34 @@
 <html>
 <head>
 <meta charset="utf8">
-<script src="java.js">
-</script>
+
 </head>
 <body>
+<script>
+	function qcor()
+{
+	var qc = document.createElement('div');
+	qc.style.width = '100px';
+	qc.style.height = '100px';
+	qc.style.backgroundColor = '#FF0000';
+	qc.style.marginBottom = '1px'
+	qc.style.display = 'inline-block';
+	var res = document.getElementById('teste');
+	qc.onmouseover = function() {
+        qc.style.backgroundColor = corale();
+      } 
+	res.appendChild(qc);
+}
+
+function corale() {
+	var letters = '0123456789ABCDEF';
+	var color = '#';
+	for (var i = 0; i < 6; i++) {
+	  color += letters[Math.floor(Math.random() * 16)];
+	}
+	return color;
+}
+</script>
 
 	<h1> Exercício número 3 - DESAFIO ROCKETSEAT 2</h1>
 
