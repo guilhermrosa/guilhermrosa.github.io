@@ -6,19 +6,19 @@
 </head>
 <body>
 
-<h1 class="centro"> Exercício 02 </h1>
-<h3> Coloque o valor de O e de H2</h3>
-<p>OG - H2M  : H2O</p>
+<h1 class="centro"> Simulação 03</h1>
+<h3> Coloque o valor de 0,5 O2 e de H2</h3>
+<p>0,5 O2(g) - H2(mol)  = H2O(g)</p>
 <br>
 <div class="margem"> 
 	<input id = "o2" 
 		type="number" 
-		placeholder="OG"
+		placeholder="O(grama)"
 	>
 
 	<input id = "h2" 
 		type="number" 
-		placeholder="H2M"
+		placeholder="H2(mol)"
 	>
 	<button onclick="limitante();">Executar</button>
 	<p id="conta"></p>
@@ -56,25 +56,25 @@ function limitante()
 
 	if(conta2<h2)
 	{
-		resultado ="Primeiro, multipliquemos por 2 o valor inserido pelo usuário para transformar o H2 de mol em gramas<br>"+"g H2 - 16g O <br>" +  "XgH2 - " + o2 + " g O <br><br><br> 2g H2 X = " + o2 +" gO = Xg O X 16g O  <br><br> Xg H2 = " + conta2 + " <br> Portanto para " + o2 + " gO é necessário " + conta2 + " gH2";
+		resultado ="<h4>1 mol de O -> 16 gramas <br> 1 mol de H2 -> 2 gramas <br>"+ o2 +" gramas de O --- "+ h2 +" gramas de H2<br><br> 16 --- 2 <br>"+ o2 +" --- x <br> 16x = "+ o2*2 +" -> x = "+ (o2*2)/16 +"<br> Para cada "+ o2 +"(g) de 0,5 O2 é necessário "+ o2*2/16 +"(g) de H2.</h4>";
 		temp_excesso = h2 - conta2;
-		resultado += "<br> <h3>h2 está em excesso e o O é o limitante, <br> e o excesso de h2g é: " + temp_excesso + " gH2<br>  o H2O formado é :" + contah2og +" gH2O</h3>";
+        resultado += "<br><br>Portanto, <b> H2</b> está em excesso e o  <b>O</b> é o limitante. <br> O excesso de <b>H2</b> é de <b>" + temp_excesso + "(g)</b><br>  O <b>H2O</b> formado é de <b>" + contah2og +"(g)</b>";
 	}
 
 
 	if(conta2>h2)
 	{
-		resultado = "2g H2 - 16g O <br>" +  h2 + " gH2 -  xg O <br><br><br> 2g H2 X XgO = " + h2 +" gH2 X 16g O  <br><br> Xg O = " + conta4 + " <br> Portanto para " + h2 + " gH2 é necessário " + conta4 + " gO";
+		resultado = "<h4>1 mol de O -> 16 gramas <br> 1 mol de H2 -> 2 gramas <br>"+ o2 +" gramas de O --- "+ h2 +" gramas de H2<br><br> 16 --- 2 <br>"+ o2 +" --- x <br> 16x = "+ o2*2 +" -> x = "+ (o2*2)/16 +"<br> Para cada "+ o2 +"(g) de 0,5 O2 é necessário "+ o2*2/16 +"(g) de H2.</h4>";
 		temp_excesso = o2 - conta4;
-		resultado += " <br> <h3>O está em excesso e o h2 é o limitante e o excesso de Og é: " + temp_excesso + " gO <br> o H2O formado é :" + contah2o +" gH2O</h3>";
+		resultado += " <br><br> Portanto,<b> O</b> está em excesso e o <b>H2</b> é o limitante.<br> O excesso de <b>O</b> é de <b>" + temp_excesso + "(g)</b> <br> O <b>H2O</b> formado é de <b>" + contah2o +" (g)</b>";
 		}
 
 
 
 	if(h2-conta2==0)
 	{
-		resultado = "2g H2 - 16g O <br>" +  "XgH2 - " + o2 + " g O <br><br><br> 2g H2 X = " + o2 +" gO = Xg O X 16g O  <br><br> Xg H2 = " + conta2 + " <br> Portanto para " + o2 + " gO é necessário " + conta2 + " gH2 <br> o H2O formado é :" + contah2o +" gH2O";
-		resultado += "<br> <h3>Não há nenhum elemento em excesso!!!</h3>";
+        resultado = "<h4>1 mol de O -> 16 gramas <br> 1 mol de H2 -> 2 gramas <br>"+ o2 +" gramas de O --- "+ h2 +" gramas de H2<br><br> 16 --- 2 <br>"+ o2 +" --- x <br> 16x = "+ o2*2 +" -> x = "+ (o2*2)/16 +"<br> Para cada "+ o2 +"(g) de 0,5 O2 é necessário "+ o2*2/16 +"(g) de H2.</h4>";
+		resultado += "<br> <h3>Portanto, não há nenhum elemento em excesso!!!</h3>";
 	}
 
 	document.getElementById("conta").innerHTML = resultado;
