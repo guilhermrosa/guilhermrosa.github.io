@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var min = /[a-z]/;
+        var mai = /[A-Z]/;
+        var num = /[1-9]/;
+        var carac_e = /[@#!$%&*()-+.,=]/;
+        $(function () {
+
+            $("#sen").keyup(function () {
+                if ($("#sen").val() == "") {
+                    $("#txt").text("");
+                    $("#txt").css('color', 'black');
+                }
+            })
+
+            $("#senha").click(function () {
+                let senha = $("#sen").val();
+                let result = "";
+                if ($("#sen").val() == "") {
+                    $("#txt").text("Senha");
+                    $("#txt").css('color', 'black');
+                }
+                if (min.test(senha) || mai.test(senha)) {
+                    $("#txt").text("Senha fraca. Procure acrescentar números e caracteres especiais.");
+                    $("#txt").css('color', 'red');
+                }
+                if (min.test(senha) && mai.test(senha) && num.test(senha)) {
+                    $("#txt").text("Senha média. Para maior segurança, adicione caracteres especiais.");
+                    $("#txt").css('color', 'orange');
+                }
+                if (min.test(senha) && mai.test(senha) && num.test(senha) && carac_e.test(senha)) {
+                    $("#txt").text("Senha forte.");
+                    $("#txt").css('color', 'green');
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>Faça uma caixa de texto que classifique:
+        - fraca (em vermelho) se só possuir letras minúsculas ou maiúsculas
+        - moderada (em laranja) se possuir letras minúsculas e maiúsculas e números
+        - forte (em verde) se possuir letras minúsculas e maiúsculas, números e caracteres especiais (@, #, !, $, %, &, *, (, ), -, +, ., =)</p>
+    <input type="password" id="sen">
+    <button id="senha">Ir</button>
+    <p id="txt"></p>
+</body>
+</html>

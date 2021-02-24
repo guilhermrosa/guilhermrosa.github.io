@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#data").click(function () {
+                let frase = $("#dt").val();
+                let frase2 = $("#dt2").val();
+                if (frase == "" || frase2 == 0) {
+                    $("#txt").text("ERRO! Tente novamente.")
+
+                }
+                else {
+                    let d1 = frase.substr(8, 2);
+                    let a1 = frase.substr(0, 4);
+                    let m1 = frase.substr(5, 2);
+                    let d2 = frase2.substr(8, 2);
+                    let a2 = frase2.substr(0, 4);
+                    let m2 = frase2.substr(5, 2);
+                    const now = new Date(a1, m1 - 1, d1);
+                    const past = new Date(a2, m2 - 1, d2);
+                    const diff = Math.abs(now.getTime() - past.getTime());
+                    const days = Math.ceil(diff / (1000 * 60 * 60 * 24 * 7));
+                    $("#txt").text("A diferença de semanas entre as datas é de " + days )
+                    $("#dt").val("");
+                    $("#dt2").val("");
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p>Faça um programa que leia duas datas e indique em semanas a distância entre elas. Por exemplo: 02/05/2017 e 02/07/2017 resultado = 8 semanas.</p>
+    <input type="date" id="dt">
+    <input type="date" id="dt2">
+    <button id="data">Ir</button>
+    <p id="txt"></p>
+</body>
+</html>
