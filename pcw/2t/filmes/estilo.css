@@ -1,0 +1,76 @@
+.catalogo{
+		width:30%;
+  		box-sizing: border-box;
+  		margin-left: 1.5%;
+  		margin-right: 1.5%;
+  		display: inline-block;
+  		background-color: rgb(255, 255, 255);
+  		height: 600px;
+  		margin-top: 5px;
+        text-align: justify;
+  	}
+  	.figura{
+ 		width: 276px; 
+ 		height:159px;
+	}
+	.titulo{
+		color: rgb(37, 0, 80);
+	}
+	p, h1, h4, li{
+		color: rgb(34, 0, 66);
+	}
+
+	.classificacao{
+		width: 30px;
+ 		height: 30px;
+         margin-left: 15px;	
+	}
+	.estrela{
+		width: 170px;
+ 		height: 50px;
+ 		margin-left: 15px;	
+	}
+	.sinopse{
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.generos{
+		font-size: 15px;
+        font-weight: bold;
+	}
+	.elenco{
+		font-size: 15px;
+        font-weight: bold;
+	}
+	.semelhantes{
+		display: inline-block;
+		font-size: 15px;
+        font-weight: bold;
+	}
+	.ts{
+		font-size: 14px;
+		margin-bottom: 1px;
+	}
+	.figura{
+ 		width: 100%; 
+ 		height: auto;
+	}
+	
+	body{
+		background-color: rgb(0, 65, 16);
+	}
+	.flix{
+		font-size: 10em;
+		margin: 5px;
+		margin-bottom: 10px;
+		text-align: center;
+		color: rgb(255, 255, 255);
+		-webkit-text-stroke-width: 0.1px; /* largura da borda */
+    	-webkit-text-stroke-color: rgb(255, 255, 255);
+	}
+
+	.t{ 
+        text-align: center;
+		color:rgb(33, 0, 61);
+	}
+ 
