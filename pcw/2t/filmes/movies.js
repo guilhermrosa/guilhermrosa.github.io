@@ -1,7 +1,7 @@
 $(function(){
 	let link = "https://rafaelescalfoni.github.io/desenv_web/filmes.json";
 	$.get(link, function(data){
-		console.log(data); 
+		console.log(data);
 		$.each(data, function(index, filme){
 			let $divCatalogo = $("<div>").addClass("catalogo");
 			let $figura = $("<img>").attr("src", filme.figura).addClass("figura");
