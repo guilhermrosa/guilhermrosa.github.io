@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+</script>
+</head>
+<body>
+
+<h1 class="centro"> Exercício 01 </h1>
+<h3> Coloque o valor de NaCl(Sal)-grama e de H2O(Água)-litro</h3>
+<p> NaCl - H2O </p>
+<br>
+<div class="margem"> 
+	<input id = "nacl" 
+		type="number" 
+		placeholder="NaCl"
+	>
+
+	<input id = "h2o" 
+		type="number" 
+		placeholder="H2O"
+	>
+	<button onclick="classificacao();">Executar</button>
+	<p id="conta"></p>
+
+
+	
+		<footer>
+			<p> Luiza Rotina e Guilherme Rosa </p>
+			<a class="retorno" href="principal.html">Voltar</a>
+		</footer>
+</div>
+<script>
+function classificacao()
+{
+	var nacl = document.getElementById("nacl").value;
+	var h2o = document.getElementById("h2o").value;
+	nacl = parseFloat(nacl);
+	h2o = parseFloat(h2o);
+	var naclp = 357;
+	var h2op = 1;
+	var r1 = nacl * h2op;
+	var r2 = naclp * h2o;
+	var r3 = r1 / r2;
+
+	if(r3<1)
+	{
+		 var resultado = "Seguindo a lógica de que 357gramas de NaCl para 1 litro de H2O é uma solução saturada, temos: <br> 357 --- 1 <br> " + nacl + " --- " + h2o + " <br> <br> " + r1 + " / " + r2 + "= (<1)"+ "<br>INSATURADA ";
+		
+	}
+
+
+	if(r3>1)
+	{
+		var resultado = "Seguindo a lógica de que 357gramas de NaCl para 1 litro de H2O é uma solução saturada, temos: <br> 357 --- 1 <br> " + nacl + " --- " + h2o + " <br> <br> " + r1 + " / " + r2 + " = (>1)<br>SUPERSATURADA ";
+	}
+
+
+
+	if(r3==1)
+	{
+		var resultado = "Seguindo a lógica de que 357gramas de NaCl para 1 litro de H2O é uma solução saturada, temos: <br> 357 --- 1 <br> " + nacl + " --- " + h2o + " <br> <br> " + r1 + " --- " + r2 + "<br> " + r1 + "/" + r2 + "= 1 <br> SATURADA";
+		
+	}
+
+	document.getElementById("conta").innerHTML = resultado;
+
+}
+
+</script>
+</body>
+</html>
