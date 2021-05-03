@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<title>Laboratório de ECMAScript 6</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body>
+    <script type="text/javascript">
+		function fibonacci(){
+			let pos = document.getElementById("num").value; 
+			let prox = [];
+			for (let i = 0; i < pos; i++) {
+				if( i == 0 )
+					prox[i] = 0;
+				else 
+                    if(i == 1)
+					    prox[i] = 1;
+                    else 
+                        if(i == 2)
+                            prox[i] = 1;
+                        else
+                            prox[i] = prox[i - 1] + prox[i - 2];
+			}
+			document.getElementById('fibonacci').innerHTML = prox;
+		}
+
+		
+	</script>
+
+
+	<h2>Exercício 2:</h2>
+	<h3>Crie uma função para exibir a sequência de Fibonacci até a posição n, por exemplo, a série com os quatro primeiros elementos é 0, 1, 1, 2. O valor da entrada e saída são respectivamente um  número  e  um  vetor. Você  deve disponibilizar  uma  página para  entrada  do  número  n  e  sua respectiva saída.</h3>
+	<p>Insira a quantidade de posições:</p>
+	<input type="number" name="valor" id="num">
+	<button onclick="fibonacci();">Resposta</button>
+	<p id="fibonacci"></p>
+
+
+
+	
+</body>

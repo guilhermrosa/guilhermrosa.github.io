@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<title>Laboratório de ECMAScript 6</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body>
+
+	<h2>Exercício 1</h2>
+	<h3> Crie um script que implemente as funções min, max, uniq, sortNum. Tais funções devem: retornar o valor mínimo (min) e máximo (max) de um array de números, retornar o array sem repetições (uniq) e ordenar o arraynumérico (sortNum).</h3>
+	<p>Meu Array: </p>
+	<p id="array"></p>
+	<p>Valor mínimo:</p>
+	<p id="min"></p>
+	<p>Valor máximo:</p>
+	<p id="max"></p>
+	<p>Sem repetição:</p>
+	<p id="uniq"></p>
+	<p>Ordenado:</p>
+	<p id="sortNum"></p>
+
+	<script type="text/javascript">
+		let meuArray = new Array(1, 56, -87, 3, 20, 14, 2, -35, 20, 1);
+		document.getElementById('array').innerHTML = meuArray;
+
+		function min(a){
+		let menornum = meuArray[0];
+            meuArray.forEach(function(num){
+                if(num < menornum)
+                    menornum = num;
+            });
+		document.getElementById('min').innerHTML = menornum;
+		}
+		min(array);
+
+		function max(a){
+            let maiornum = meuArray[0];
+            meuArray.forEach(function(num){
+                if(num > maiornum)
+                    maiornum = num;
+            });
+		document.getElementById('max').innerHTML = maiornum;
+		}
+		max(meuArray);
+	
+		function uniq(a){
+            let norepeat = a.filter(function(num, i){
+                return a.indexOf(num) === i;
+            });
+		document.getElementById('uniq').innerHTML = norepeat;
+		}
+		uniq(meuArray);
+
+		function sortNum(a){
+            let ordenado = a.sort(function(num1, num2){
+                if(num1 > num2) 
+                    return 1;
+                if(num1 < num2)
+                    return -1;
+                return 0;
+		});
+		document.getElementById('sortNum').innerHTML = ordenado;
+		}
+		sortNum(meuArray);
+
+		
+	</script>
+</body>

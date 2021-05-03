@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+	<title>Laboratório de ECMAScript6</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body>
+
+
+	<h2>Exercício 3</h2>
+    <h3>Implementeuma função double(), que retorne o array com cada um dos elementos duplicado.A função deve usar map. b.Implemente uma função evenElements(), que retorne umarray com apenas os elementos pares do array original.A função deve usar filter.c.Implemente uma função sum(), que retorne a soma de todos os elementos do array. A função deve usar reduce.</h3>
+	<p>Lista:</p>
+	<p id="lista"></p>
+	<p>Elementos duplicados:</p>
+	<p id="edupli"></p>
+	<p>Elementos pares:</p>
+	<p id="par"></p>
+	<p>Soma dos elementos:</p>
+	<p id="soma"></p>
+
+	<script type="text/javascript">
+		const lista = [1, 2, 3, 4, 5, 6];
+		document.getElementById('lista').innerHTML = lista;
+
+		function double(list){
+			let dobro = list.map(function(num){
+				return num * 2;
+			}) 
+			document.getElementById('edupli').innerHTML = dobro;
+		}
+		double(lista);
+
+		function evenElements(list){
+			let pares = list.filter(function(num){
+				return num%2 == 0;
+			});
+			document.getElementById('par').innerHTML = pares;
+		}
+		evenElements(lista);
+
+		function sum(list){
+			let soma = 0;
+			soma = list.reduce(function(soma, num){
+				return soma + num;
+			})
+			document.getElementById('soma').innerHTML = soma;
+		}
+		sum(lista);
+
+	</script>
+</body>
