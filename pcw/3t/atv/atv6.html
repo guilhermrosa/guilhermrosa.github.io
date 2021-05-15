@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+	<title>Laboratório de ECMAScript 6</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body>
+    <script type="text/javascript">
+		function tiptri(){
+			let l1 = document.getElementById("num").valueAsNumber; 
+            let l2 = document.getElementById("num2").valueAsNumber; 
+            let l3 = document.getElementById("num3").valueAsNumber; 
+			let result;
+
+
+        if(((l1+l2)<=l3)||((l2+l3)<=l1)||((l3+l1)<=l2)){
+            result = "ERRO.";
+        }else if(l1<=0||l2<=0||l3<=0){
+                    result = "ERRO.";
+                }else if((l1==l2)&&(l2==l3)){
+                            result = "Triângulo equilátero.";
+                        }else if((l1!=l2)&&(l2!=l3)&&(l3!=l1)){
+                                    result = "Triângulo escaleno.";
+                            }else if(((l1==l2)&&(l1!=l3))||((l1==l3)&&(l2!=l3))||((l3==l2)&&(l1!=l3))){
+                                        result = "Triângulo isósceles.";
+                                }
+            
+                    
+			document.getElementById('tiptri').innerHTML = result;
+		}
+
+		
+	</script>
+
+
+	<h2>Verificação de triângulos</h2>
+	<h3>O triângulo é uma figura que possui três lados, e dependendo dos valores dos lados sua classificação pode ser equilátero, isósceles e escaleno dependendo se a quantidade de lados iguais forem respectivamente três, dois e nenhum.</h3>
+	<p>Insira os lados do triângulo:</p>
+	<input type="number" id="num" >
+    <br>
+    <input type="number" id="num2">
+    <br>
+    <input type="number" id="num3">
+	<button onclick="tiptri();">Resultado</button>
+	<p id="tiptri"></p>
+
+
+
+	
+</body>
+</html>

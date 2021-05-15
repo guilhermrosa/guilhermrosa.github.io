@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+	<title>Laboratório de ECMAScript 6</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body>
+    <script type="text/javascript">
+		function criprot(){
+			let rot = document.getElementById("num").valueAsNumber; 
+			let texto = document.getElementById("txt").value;
+            let alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            let result = texto.split('');
+            let tam = texto.length;
+            let tama = alfabeto.length;
+            let i = 0;
+            let x = 0;
+            let z;
+            let g;
+ 
+            while(x<tam){
+                g = result[x];
+                while(i<tama){
+                    if(alfabeto[i] == g){
+                        if((i+rot)>tama){
+                            z = i + rot - tama;
+                            result[x] = alfabeto[z];
+                        }else if((i+rot)==tama){
+                            result[x] = alfabeto[0];
+                        }else{
+                            result[x] = alfabeto[i+rot];
+                        }
+                        
+                    }
+                    i = i+1;
+                }
+                i = 0;
+                x=x+1;
+            }
+                
+
+			document.getElementById('criprot').innerHTML = result.join('');
+		}
+
+		
+	</script>
+
+
+	<h2>Criptografia por rotação</h2>
+	<h3>A Cifra de Rotação é uma técnica de criptografia que faz uma transposição de um caractere por outro.</h3>
+	<p>Insira o texto:</p>
+	<input type="text" id="txt">
+    <p>Insira o número de posições de rotação:</p>
+	<input type="number" id="num">
+	<button onclick="criprot();">Resultado</button>
+	<p id="criprot"></p>
+
+
+
+	
+</body>
+</html>
