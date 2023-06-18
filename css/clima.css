@@ -1,4 +1,3 @@
-/* Apply some basic styles to the header */
 body {
   margin: 0;
   background-color: #D9D9D9;
@@ -23,7 +22,7 @@ height: 85px;
 }
 
 .header img {
-  margin: 0 10.5px; /* Adjust the margin between the images */
+  margin: 0 10.5px;
 }
 
 .imgs {
@@ -35,10 +34,6 @@ height: 85px;
 .imgs img {
   margin: 25px 0px;
   min-width: 5%;
-}
-
-.meio {
-  align-items: center;
 }
 
 .bloco {
@@ -79,12 +74,9 @@ height: 85px;
   font-weight: 400;
   font-size: 96px;
   line-height: 139px;
-  /* identical to box height */
-
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #FFFCFC;
 }
 
@@ -106,14 +98,6 @@ font-weight: 400;
 font-size: 16px;
 line-height: 23px;
 text-align: justify;
-}
-
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 footer {

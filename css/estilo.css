@@ -1,14 +1,12 @@
-/* Apply some basic styles to the header */
     body {
-        margin: 0;
-        background-color: #375B84;
-        background-image: url('../img/fundo.png');
-        background-repeat: no-repeat;
-        background-size: 73% auto;
-        background-position: top left;
-        /*background-attachment: fixed;*/
-        height: 1000px;
-        }
+      margin: 0;
+      background-color: #375B84;
+      background-image: url('../img/fundo.png');
+      background-repeat: no-repeat;
+      background-size: 73% auto;
+      background-position: top left;
+      height: 1000px;
+      }
 
 
     .header {
@@ -27,7 +25,7 @@
     }
 
     .header img {
-        margin: 0 10.5px; /* Adjust the margin between the images */
+        margin: 0 10.5px;
       }
 
     .txtdiv-inicio {
@@ -78,13 +76,12 @@
         z-index: -10000;
         left: 166px;
         top: 85px;
-        /*width: 440px;
-        height: 278px;
-        padding: 10px;
-        color: #D9D9D9;
-        font-family: 'Kaisei Decol', serif;
-        font-style: normal;
-        font-size: 30px;*/
+      }
+
+      .text-div p {
+        font-size: 96px; 
+        line-height: 100%; 
+        color: rgba(217, 217, 217, 1);
       }
 
     footer {
@@ -95,13 +92,7 @@
         height: 85px;
         background-color: #000000;
       }
-    
-    /* Add some content to the header */
-    .header h1 {
-      margin: 0;
-    }
-    
-    /* Add some space below the header */
+ 
     .content {
-      margin-top: 100px; /* Adjust the value to match the height of your header */
+      margin-top: 100px;
     }
